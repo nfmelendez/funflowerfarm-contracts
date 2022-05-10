@@ -21,7 +21,7 @@ Run `make` to see full list of commands.
 
 ## Contract Addresses
 
-FFFTOKEN_CONTRACT=[0xD1f9c58e33933a993A3891F8acFe05a68E1afC05](https://rinkeby.etherscan.io/token/0x4388528987490e680fa424be3058cecdba695be7) in rinkeby
+FFFTOKEN_CONTRACT=[0x47466739ce3ae36fdb7c1a0419a5fdc862c666b2](https://rinkeby.etherscan.io/token/0x47466739ce3ae36fdb7c1a0419a5fdc862c666b2) in rinkeby
           
 ## Architecture
 
