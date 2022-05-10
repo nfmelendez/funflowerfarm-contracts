@@ -7,19 +7,12 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol";
 import "./GameOwner.sol";
 
 contract FunflowerFarmToken is ERC20Pausable, GameOwner {
-  address private team;
 
   uint256 private TEAM_INITIAL_MINT = 500000*10**18; // 500000 FFF
 
   constructor() payable ERC20("Funflower Farm", "FFF") {
-      team = msg.sender;
       gameRoles[msg.sender] = true;
-      _mint(team, TEAM_INITIAL_MINT);
-  }
-
-  function passTeamRole(address _team) public onlyOwner returns (bool) {
-    team = _team;
-    return true;
+      _mint(msg.sender, TEAM_INITIAL_MINT);
   }
   
   function gameMint(address account, uint256 amount) public onlyGame whenNotPaused returns (bool){
