@@ -1,4 +1,4 @@
-const HDWalletProvider = require("truffle-hdwallet-provider-privkey");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 require('dotenv').config()
 
 const privateKeys = process.env.WALLET_PRIVATE_KEY || "";
@@ -31,7 +31,7 @@ module.exports = {
         );
       },
       gas: 5000000,
-      gasPrice: 20000000000, // 15 gwei
+      gasPrice: 200000000000, // 15 gwei
       network_id: 137,
     },
   },
