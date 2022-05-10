@@ -30,6 +30,6 @@ Funflower farm  uses an off-chain architecture to allow players to store data of
 **Data Storage**
 _Contracts that hold the core data in the game_
 
-- `FFFToken.sol` - SFL ERC20 token
+- `FFFToken.sol` - FFF ERC20 token
 
 
