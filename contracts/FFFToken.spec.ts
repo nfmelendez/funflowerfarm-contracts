@@ -6,7 +6,7 @@ describe("FFF Token contract", () => {
 
   describe("Minting", () => {
 
-    it("team initial mint of FFF", async () => {
+    it.only("team initial mint of FFF", async () => {
       const web3 = new Web3(
         new Web3.providers.HttpProvider(process.env.ETH_NETWORK)
       );

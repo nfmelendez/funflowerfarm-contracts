@@ -1,0 +1,551 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0xA9ffda65FE2248089383D7EcFeDc110E0DC2B28D",
+      "txHash": "0x9af78e1adc9a369174fc6193cddaf95e1ba427b0c02da376c43f9c84ddedff03",
+      "kind": "uups"
+    },
+    {
+      "address": "0x2361d84650af03087EE0f5D0109F5232d744C64B",
+      "txHash": "0x30e2e8d710f49480dadc8af8d295774f73fe82ebd2b35301dead6e2924920858",
+      "kind": "uups"
+    },
+    {
+      "address": "0xa988C0E2155eD719359ceBA9b3a30b700E2D2686",
+      "txHash": "0xe5e2eabc5c5065c46f50a98affa527e96579c7d5febb44e5380e031e01f5c0f6",
+      "kind": "uups"
+    },
+    {
+      "address": "0x395f2038be8e2BA3a59dfc8ca7d0b74EAE341715",
+      "txHash": "0xc7b276de66bd6fc75f594ce52d629d6e50e4711c53a58737c8e28a9abad41832",
+      "kind": "uups"
+    },
+    {
+      "address": "0x50f22C0918551a3E25F162EA1a1DC8Ce4944d1D6",
+      "txHash": "0xe00109defef75555655a936ea81d6f3578ce615f1a98386ceff57a00439f194c",
+      "kind": "uups"
+    },
+    {
+      "address": "0xa6F7644DD758F7Cd79528930bdaDc3Ca822F60aF",
+      "txHash": "0x2eece5837fa531a795452f10baa8c0a71590bd6f125a2b61b41992aede69cd97",
+      "kind": "uups"
+    },
+    {
+      "address": "0x06c151071b6aD65c829Ebb0E110D656CA6e6b3b1",
+      "txHash": "0x7ef6ef5dc84c6bd4a2d20cc727e2b96a5495c0db2c96b38489acc9fbb893bd7e",
+      "kind": "uups"
+    },
+    {
+      "address": "0x2293d6Eb7A12573600F3B455611C7A59F3936CD2",
+      "txHash": "0x89e60e07b64341583bf1232702dfa0bf5d48625bf06d22b536e7331fb72be50a",
+      "kind": "uups"
+    },
+    {
+      "address": "0x2bd5472A931aed934e3A71bDDE7FD8410922BEea",
+      "txHash": "0x006e5b368204d30d6f4c8f2ff12111a07f35471c2caa3614cec85879a6fb98a4",
+      "kind": "uups"
+    },
+    {
+      "address": "0x06BcE0c3A3E94Be0a6189A164656947c90770e0e",
+      "txHash": "0xf8b9eaf4fceb487eec6980dc17cf016521d8b5daca4db56c88ab267cec1db9cd",
+      "kind": "uups"
+    },
+    {
+      "address": "0x11058116b0234c206D45E7B391B93f192e75Fff1",
+      "txHash": "0xdde03a3d3ab61bdb15073f1040144eaa3fa68488b847bc69aa22a232a9d68a73",
+      "kind": "uups"
+    },
+    {
+      "address": "0x3Fd84ff1D65778c3D1De815EE64c9590ED5879f5",
+      "txHash": "0x8813e8bc1d7eba9cc9b26c1da7a9c926cd2b6611e12480adf75498e56a62095f",
+      "kind": "uups"
+    },
+    {
+      "address": "0x5E29CED68deA1fE288951a67af68EDD16a3485Ec",
+      "txHash": "0x9b42d5ebfd55c38edbcf1621fef7c6bad851ff8309cfa4309c2b042e792ae687",
+      "kind": "uups"
+    },
+    {
+      "address": "0xCb96e16a7196F66B54Daa3B3304d6C4609Bdb4fe",
+      "txHash": "0xd59ab63478d7d17b7079c2c8405cdc71e95df92874723ce2864cec03428194ba",
+      "kind": "uups"
+    },
+    {
+      "address": "0x255eF0554A4f5DeB303FB16d4d0D33f094215d30",
+      "txHash": "0xb78a5b6effd4ae3ba58e67572bd8c4a83002143dfc439a6fbc47a45a857042e0",
+      "kind": "uups"
+    },
+    {
+      "address": "0x03F2Aba00aDB734aCc39233525722943c7821873",
+      "txHash": "0xdbde5d3650619540bebc8f583ff146a894c8fb4746805d8cdc9f83f9b5a24b5b",
+      "kind": "uups"
+    },
+    {
+      "address": "0x2bDF1063dd58d026139e0671C16435D42CD5642c",
+      "txHash": "0x4f1815cf492b9364053d11d701afa2f5874d01360083c6efbe89cf487f1b64e6",
+      "kind": "uups"
+    },
+    {
+      "address": "0x3Bda6CD2E7A51B903feE0fCb3cE3a24D1746aa0e",
+      "txHash": "0x04f98ba2c67e63a7b2be612f78740a7e17a4ea527134a97e407a82f403cae233",
+      "kind": "uups"
+    }
+  ],
+  "impls": {
+    "9df07de7ea804557f6361e2e6411aafd2693b8199d3b8efaed42546d06a85a00": {
+      "address": "0x14f6E467d646f28DBFa440Fa0874B67D69415a86",
+      "txHash": "0x8fd7e4cf054b6f14c426d9ea9d5325c02ddf052562c0cc1c70457fb0392994a8",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_uint8",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:87"
+          },
+          {
+            "contract": "GameOwnerUpgradeable",
+            "label": "gameRoles",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/GameOwnerUpgradeable.sol:8"
+          },
+          {
+            "contract": "ERC1967UpgradeUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "contract": "UUPSUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol:107"
+          },
+          {
+            "contract": "Bank",
+            "label": "fffToken",
+            "type": "t_contract(FunflowerFarmToken)2291",
+            "src": "../project:/contracts/Bank.sol:12"
+          }
+        ],
+        "types": {
+          "t_contract(FunflowerFarmToken)2291": {
+            "label": "contract FunflowerFarmToken"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          }
+        }
+      }
+    },
+    "f94dd17a236c543ea76ac1f7ced62f6fad0de6c73a0999419154309c17523a8f": {
+      "address": "0x5ebD5EB8fe6C57BcdA688C113a78e4F0a8282c48",
+      "txHash": "0x5427c458f3fefae09c0d8c2dfacaee39a332241d7751b5f688233c0d2c0c11e9",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_uint8",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:87"
+          },
+          {
+            "contract": "GameOwnerUpgradeable",
+            "label": "gameRoles",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/GameOwnerUpgradeable.sol:8"
+          },
+          {
+            "contract": "ERC1967UpgradeUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "contract": "UUPSUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol:107"
+          },
+          {
+            "contract": "Bank",
+            "label": "fffToken",
+            "type": "t_contract(FunflowerFarmToken)2291",
+            "src": "../project:/contracts/Bank.sol:12"
+          }
+        ],
+        "types": {
+          "t_contract(FunflowerFarmToken)2291": {
+            "label": "contract FunflowerFarmToken"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          }
+        }
+      }
+    },
+    "35e4cf54bb87fcad23dddcf29ae1d1899bdcff2d67aad806c88e33a7f7108e90": {
+      "address": "0x063F693bedf40B1c17F8a6De0599b4D301B50929",
+      "txHash": "0xfe8ced9238c9b937981e854b54246223f657c4de0e5b4ba3e07004e969540724",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_uint8",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:87"
+          },
+          {
+            "contract": "GameOwnerUpgradeable",
+            "label": "gameRoles",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/GameOwnerUpgradeable.sol:8"
+          },
+          {
+            "contract": "ERC1967UpgradeUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "contract": "UUPSUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol:107"
+          },
+          {
+            "contract": "Bank",
+            "label": "fffToken",
+            "type": "t_contract(FunflowerFarmToken)2298",
+            "src": "../project:/contracts/Bank.sol:12"
+          }
+        ],
+        "types": {
+          "t_contract(FunflowerFarmToken)2298": {
+            "label": "contract FunflowerFarmToken"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          }
+        }
+      }
+    },
+    "577639b98b2af31dbe09a1a82ded222ed61b1fb09b198c6ff8c1dc3a87985d94": {
+      "address": "0xCa75E9f842c63827164FC6bfB777Fd7Ac4b47603",
+      "txHash": "0x4f64aebed143449cca880e4672eb9761bbbf3bf6a84ace75c5240d75ad52b308",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_uint8",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:87"
+          },
+          {
+            "contract": "GameOwnerUpgradeable",
+            "label": "gameRoles",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/GameOwnerUpgradeable.sol:8"
+          },
+          {
+            "contract": "ERC1967UpgradeUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "contract": "UUPSUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol:107"
+          },
+          {
+            "contract": "TestBank",
+            "label": "fffToken",
+            "type": "t_contract(FunflowerFarmToken)2298",
+            "src": "../project:/contracts/TestBank.sol:14"
+          },
+          {
+            "contract": "TestBank",
+            "label": "testToken",
+            "type": "t_contract(TestToken)2708",
+            "src": "../project:/contracts/TestBank.sol:15"
+          }
+        ],
+        "types": {
+          "t_contract(FunflowerFarmToken)2298": {
+            "label": "contract FunflowerFarmToken"
+          },
+          "t_contract(TestToken)2708": {
+            "label": "contract TestToken"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          }
+        }
+      }
+    },
+    "c55b7736dbbab8c1459da501d174423e91d031aea2946aad80d5a01ec6fb4753": {
+      "address": "0x092b5289C64C2F9AFEF820DcAeaacEbD25eb4165",
+      "txHash": "0x34463557fcc7c9e6237a8152de18c4338b16b83311776b1d4d8285aeb164929e",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_uint8",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:87"
+          },
+          {
+            "contract": "GameOwnerUpgradeable",
+            "label": "gameRoles",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/GameOwnerUpgradeable.sol:8"
+          },
+          {
+            "contract": "ERC1967UpgradeUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "contract": "UUPSUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol:107"
+          },
+          {
+            "contract": "Bank",
+            "label": "fffToken",
+            "type": "t_contract(FunflowerFarmToken)2302",
+            "src": "../project:/contracts/Bank.sol:12"
+          }
+        ],
+        "types": {
+          "t_contract(FunflowerFarmToken)2302": {
+            "label": "contract FunflowerFarmToken"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,6 +10,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
     "@openzeppelin/contracts": "^4.4.2",
+    "@openzeppelin/truffle-upgrades": "^1.15.0",
     "@tsconfig/node14": "^1.0.1",
     "@types/jest": "^27.4.1",
     "@types/node": "<15.0.0",
@@ -20,6 +21,7 @@
     "prettier": "2.5.1"
   },
   "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^4.6.0",
     "@truffle/hdwallet-provider": "^2.0.8",
     "dotenv": "^16.0.0",
     "ethereumjs-tx": "^2.1.2",

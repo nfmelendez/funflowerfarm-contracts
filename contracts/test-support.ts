@@ -1,6 +1,8 @@
 import Web3 from "web3";
 import { AbiItem } from "web3-utils";
 import abijson from "../bin/contracts/combined.json";
+const { deployProxy, upgradeProxy } = require('@openzeppelin/truffle-upgrades');
+
 
 export const gasLimit = 6721975;
 
@@ -22,16 +24,24 @@ export class TestAccount {
 }
 
 export async function deploySFLContracts(web3: Web3) {
-  const [fffToken] = await Promise.all([
+  console.log('Start Contract deployed')
 
+  const [fffToken, bank] = await Promise.all([
     deployContract(
       web3,
       abijson.contracts["contracts/FFFToken.sol:FunflowerFarmToken"],
       TestAccount.TEAM.address,
     ),
+    deployProxy(abijson.contracts["contracts/FFFToken.sol:FunflowerFarmToken"], []),
   ]);
+  console.log('Finish Contract deployed')
+  //await bank.methods.initialize().send({ from: TestAccount.TEAM.address })
+  console.log('Finish Contract initialize')
 
-  return { fffToken };
+  await fffToken.methods.addGameRole(bank.options.address).send({ from: TestAccount.TEAM.address })
+  await bank.methods.setTokens(fffToken.options.address).send({ from: TestAccount.TEAM.address })
+
+  return {fffToken, bank};
 }
 
 async function deployContract(
