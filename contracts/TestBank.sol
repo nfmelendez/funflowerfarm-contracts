@@ -11,6 +11,15 @@ import "./TestToken.sol";
 
 contract TestBank is GameOwnerUpgradeable, UUPSUpgradeable {
 
+    mapping(bytes32 => bool) public executed;
+
+    // Farm ID to saved timestamp
+    mapping(address => bytes32) public sessions;
+    mapping(address => uint) public syncedAt;
+
+    uint private withdrawFee;
+    address private withdrawFeeWallet;
+    
     FunflowerFarmToken private fffToken;
     TestToken private testToken;
 
