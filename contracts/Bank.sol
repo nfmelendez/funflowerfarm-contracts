@@ -23,8 +23,8 @@ contract Bank is GameOwnerUpgradeable, UUPSUpgradeable {
     function _authorizeUpgrade(address) internal override onlyOwner {}
 
     function withdraw(
-        bytes memory signature,
-        bytes32 sessionId,
+       // bytes memory signature,
+       // bytes32 sessionId,
         uint256 fff) 
         payable public returns (bool) {
         fffToken.gameMint(msg.sender, fff);
