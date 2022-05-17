@@ -1666,18 +1666,18 @@
         2082
       ],
       "GameOwner": [
-        3176
+        3228
       ],
       "Ownable": [
         1240
       ]
     },
-    "id": 3177,
+    "id": 3229,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3126,
+        "id": 3178,
         "literals": [
           "solidity",
           "^",
@@ -1690,10 +1690,10 @@
       {
         "absolutePath": "@openzeppelin/contracts/access/Ownable.sol",
         "file": "@openzeppelin/contracts/access/Ownable.sol",
-        "id": 3127,
+        "id": 3179,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 3177,
+        "scope": 3229,
         "sourceUnit": 1241,
         "src": "57:52:20",
         "symbolAliases": [],
@@ -1704,13 +1704,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 3128,
+              "id": 3180,
               "name": "Ownable",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 1240,
               "src": "134:7:20"
             },
-            "id": 3129,
+            "id": 3181,
             "nodeType": "InheritanceSpecifier",
             "src": "134:7:20"
           }
@@ -1719,9 +1719,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 3176,
+        "id": 3228,
         "linearizedBaseContracts": [
-          3176,
+          3228,
           1240,
           2082
         ],
@@ -1731,12 +1731,12 @@
         "nodes": [
           {
             "constant": false,
-            "id": 3133,
+            "id": 3185,
             "mutability": "mutable",
             "name": "gameRoles",
             "nameLocation": "172:9:20",
             "nodeType": "VariableDeclaration",
-            "scope": 3176,
+            "scope": 3228,
             "src": "146:35:20",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1745,9 +1745,9 @@
               "typeString": "mapping(address => bool)"
             },
             "typeName": {
-              "id": 3132,
+              "id": 3184,
               "keyType": {
-                "id": 3130,
+                "id": 3182,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "155:7:20",
@@ -1763,7 +1763,7 @@
                 "typeString": "mapping(address => bool)"
               },
               "valueType": {
-                "id": 3131,
+                "id": 3183,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "166:4:20",
@@ -1777,37 +1777,37 @@
           },
           {
             "body": {
-              "id": 3146,
+              "id": 3198,
               "nodeType": "Block",
               "src": "239:36:20",
               "statements": [
                 {
                   "expression": {
-                    "id": 3144,
+                    "id": 3196,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 3140,
+                        "id": 3192,
                         "name": "gameRoles",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3133,
+                        "referencedDeclaration": 3185,
                         "src": "247:9:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 3142,
+                      "id": 3194,
                       "indexExpression": {
-                        "id": 3141,
+                        "id": 3193,
                         "name": "_game",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3135,
+                        "referencedDeclaration": 3187,
                         "src": "257:5:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1829,7 +1829,7 @@
                     "operator": "=",
                     "rightHandSide": {
                       "hexValue": "74727565",
-                      "id": 3143,
+                      "id": 3195,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1849,22 +1849,22 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3145,
+                  "id": 3197,
                   "nodeType": "ExpressionStatement",
                   "src": "247:23:20"
                 }
               ]
             },
             "functionSelector": "7323b8fa",
-            "id": 3147,
+            "id": 3199,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 3138,
+                "id": 3190,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 3137,
+                  "id": 3189,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 1182,
@@ -1878,17 +1878,17 @@
             "nameLocation": "195:11:20",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3136,
+              "id": 3188,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3135,
+                  "id": 3187,
                   "mutability": "mutable",
                   "name": "_game",
                   "nameLocation": "215:5:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3147,
+                  "scope": 3199,
                   "src": "207:13:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1897,7 +1897,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3134,
+                    "id": 3186,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "207:7:20",
@@ -1913,12 +1913,12 @@
               "src": "206:15:20"
             },
             "returnParameters": {
-              "id": 3139,
+              "id": 3191,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "239:0:20"
             },
-            "scope": 3176,
+            "scope": 3228,
             "src": "186:89:20",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -1926,37 +1926,37 @@
           },
           {
             "body": {
-              "id": 3160,
+              "id": 3212,
               "nodeType": "Block",
               "src": "335:37:20",
               "statements": [
                 {
                   "expression": {
-                    "id": 3158,
+                    "id": 3210,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 3154,
+                        "id": 3206,
                         "name": "gameRoles",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3133,
+                        "referencedDeclaration": 3185,
                         "src": "343:9:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 3156,
+                      "id": 3208,
                       "indexExpression": {
-                        "id": 3155,
+                        "id": 3207,
                         "name": "_game",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3149,
+                        "referencedDeclaration": 3201,
                         "src": "353:5:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1978,7 +1978,7 @@
                     "operator": "=",
                     "rightHandSide": {
                       "hexValue": "66616c7365",
-                      "id": 3157,
+                      "id": 3209,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1998,22 +1998,22 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3159,
+                  "id": 3211,
                   "nodeType": "ExpressionStatement",
                   "src": "343:24:20"
                 }
               ]
             },
             "functionSelector": "19892b51",
-            "id": 3161,
+            "id": 3213,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 3152,
+                "id": 3204,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 3151,
+                  "id": 3203,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 1182,
@@ -2027,17 +2027,17 @@
             "nameLocation": "288:14:20",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3150,
+              "id": 3202,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3149,
+                  "id": 3201,
                   "mutability": "mutable",
                   "name": "_game",
                   "nameLocation": "311:5:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3161,
+                  "scope": 3213,
                   "src": "303:13:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2046,7 +2046,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3148,
+                    "id": 3200,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "303:7:20",
@@ -2062,12 +2062,12 @@
               "src": "302:15:20"
             },
             "returnParameters": {
-              "id": 3153,
+              "id": 3205,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "335:0:20"
             },
-            "scope": 3176,
+            "scope": 3228,
             "src": "279:93:20",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -2075,7 +2075,7 @@
           },
           {
             "body": {
-              "id": 3174,
+              "id": 3226,
               "nodeType": "Block",
               "src": "394:98:20",
               "statements": [
@@ -2087,30 +2087,30 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 3169,
+                        "id": 3221,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "baseExpression": {
-                            "id": 3164,
+                            "id": 3216,
                             "name": "gameRoles",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3133,
+                            "referencedDeclaration": 3185,
                             "src": "408:9:20",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                               "typeString": "mapping(address => bool)"
                             }
                           },
-                          "id": 3167,
+                          "id": 3219,
                           "indexExpression": {
                             "arguments": [],
                             "expression": {
                               "argumentTypes": [],
-                              "id": 3165,
+                              "id": 3217,
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
@@ -2121,7 +2121,7 @@
                                 "typeString": "function () view returns (address)"
                               }
                             },
-                            "id": 3166,
+                            "id": 3218,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -2151,7 +2151,7 @@
                         "operator": "==",
                         "rightExpression": {
                           "hexValue": "74727565",
-                          "id": 3168,
+                          "id": 3220,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2173,7 +2173,7 @@
                       },
                       {
                         "hexValue": "46756e666c6f776572204661726d3a20596f7520617265206e6f74207468652067616d65",
-                        "id": 3170,
+                        "id": 3222,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2199,7 +2199,7 @@
                           "typeString": "literal_string \"Funflower Farm: You are not the game\""
                         }
                       ],
-                      "id": 3163,
+                      "id": 3215,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -2213,7 +2213,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3171,
+                    "id": 3223,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2228,23 +2228,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3172,
+                  "id": 3224,
                   "nodeType": "ExpressionStatement",
                   "src": "400:80:20"
                 },
                 {
-                  "id": 3173,
+                  "id": 3225,
                   "nodeType": "PlaceholderStatement",
                   "src": "486:1:20"
                 }
               ]
             },
-            "id": 3175,
+            "id": 3227,
             "name": "onlyGame",
             "nameLocation": "385:8:20",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 3162,
+              "id": 3214,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "394:0:20"
@@ -2254,7 +2254,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 3177,
+        "scope": 3229,
         "src": "112:383:20",
         "usedErrors": []
       }
@@ -2268,18 +2268,18 @@
         2082
       ],
       "GameOwner": [
-        3176
+        3228
       ],
       "Ownable": [
         1240
       ]
     },
-    "id": 3177,
+    "id": 3229,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3126,
+        "id": 3178,
         "literals": [
           "solidity",
           "^",
@@ -2292,10 +2292,10 @@
       {
         "absolutePath": "@openzeppelin/contracts/access/Ownable.sol",
         "file": "@openzeppelin/contracts/access/Ownable.sol",
-        "id": 3127,
+        "id": 3179,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 3177,
+        "scope": 3229,
         "sourceUnit": 1241,
         "src": "57:52:20",
         "symbolAliases": [],
@@ -2306,13 +2306,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 3128,
+              "id": 3180,
               "name": "Ownable",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 1240,
               "src": "134:7:20"
             },
-            "id": 3129,
+            "id": 3181,
             "nodeType": "InheritanceSpecifier",
             "src": "134:7:20"
           }
@@ -2321,9 +2321,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 3176,
+        "id": 3228,
         "linearizedBaseContracts": [
-          3176,
+          3228,
           1240,
           2082
         ],
@@ -2333,12 +2333,12 @@
         "nodes": [
           {
             "constant": false,
-            "id": 3133,
+            "id": 3185,
             "mutability": "mutable",
             "name": "gameRoles",
             "nameLocation": "172:9:20",
             "nodeType": "VariableDeclaration",
-            "scope": 3176,
+            "scope": 3228,
             "src": "146:35:20",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2347,9 +2347,9 @@
               "typeString": "mapping(address => bool)"
             },
             "typeName": {
-              "id": 3132,
+              "id": 3184,
               "keyType": {
-                "id": 3130,
+                "id": 3182,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "155:7:20",
@@ -2365,7 +2365,7 @@
                 "typeString": "mapping(address => bool)"
               },
               "valueType": {
-                "id": 3131,
+                "id": 3183,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "166:4:20",
@@ -2379,37 +2379,37 @@
           },
           {
             "body": {
-              "id": 3146,
+              "id": 3198,
               "nodeType": "Block",
               "src": "239:36:20",
               "statements": [
                 {
                   "expression": {
-                    "id": 3144,
+                    "id": 3196,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 3140,
+                        "id": 3192,
                         "name": "gameRoles",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3133,
+                        "referencedDeclaration": 3185,
                         "src": "247:9:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 3142,
+                      "id": 3194,
                       "indexExpression": {
-                        "id": 3141,
+                        "id": 3193,
                         "name": "_game",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3135,
+                        "referencedDeclaration": 3187,
                         "src": "257:5:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2431,7 +2431,7 @@
                     "operator": "=",
                     "rightHandSide": {
                       "hexValue": "74727565",
-                      "id": 3143,
+                      "id": 3195,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2451,22 +2451,22 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3145,
+                  "id": 3197,
                   "nodeType": "ExpressionStatement",
                   "src": "247:23:20"
                 }
               ]
             },
             "functionSelector": "7323b8fa",
-            "id": 3147,
+            "id": 3199,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 3138,
+                "id": 3190,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 3137,
+                  "id": 3189,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 1182,
@@ -2480,17 +2480,17 @@
             "nameLocation": "195:11:20",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3136,
+              "id": 3188,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3135,
+                  "id": 3187,
                   "mutability": "mutable",
                   "name": "_game",
                   "nameLocation": "215:5:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3147,
+                  "scope": 3199,
                   "src": "207:13:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2499,7 +2499,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3134,
+                    "id": 3186,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "207:7:20",
@@ -2515,12 +2515,12 @@
               "src": "206:15:20"
             },
             "returnParameters": {
-              "id": 3139,
+              "id": 3191,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "239:0:20"
             },
-            "scope": 3176,
+            "scope": 3228,
             "src": "186:89:20",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -2528,37 +2528,37 @@
           },
           {
             "body": {
-              "id": 3160,
+              "id": 3212,
               "nodeType": "Block",
               "src": "335:37:20",
               "statements": [
                 {
                   "expression": {
-                    "id": 3158,
+                    "id": 3210,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 3154,
+                        "id": 3206,
                         "name": "gameRoles",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3133,
+                        "referencedDeclaration": 3185,
                         "src": "343:9:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 3156,
+                      "id": 3208,
                       "indexExpression": {
-                        "id": 3155,
+                        "id": 3207,
                         "name": "_game",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3149,
+                        "referencedDeclaration": 3201,
                         "src": "353:5:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2580,7 +2580,7 @@
                     "operator": "=",
                     "rightHandSide": {
                       "hexValue": "66616c7365",
-                      "id": 3157,
+                      "id": 3209,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2600,22 +2600,22 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3159,
+                  "id": 3211,
                   "nodeType": "ExpressionStatement",
                   "src": "343:24:20"
                 }
               ]
             },
             "functionSelector": "19892b51",
-            "id": 3161,
+            "id": 3213,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 3152,
+                "id": 3204,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 3151,
+                  "id": 3203,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 1182,
@@ -2629,17 +2629,17 @@
             "nameLocation": "288:14:20",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3150,
+              "id": 3202,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3149,
+                  "id": 3201,
                   "mutability": "mutable",
                   "name": "_game",
                   "nameLocation": "311:5:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3161,
+                  "scope": 3213,
                   "src": "303:13:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2648,7 +2648,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3148,
+                    "id": 3200,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "303:7:20",
@@ -2664,12 +2664,12 @@
               "src": "302:15:20"
             },
             "returnParameters": {
-              "id": 3153,
+              "id": 3205,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "335:0:20"
             },
-            "scope": 3176,
+            "scope": 3228,
             "src": "279:93:20",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -2677,7 +2677,7 @@
           },
           {
             "body": {
-              "id": 3174,
+              "id": 3226,
               "nodeType": "Block",
               "src": "394:98:20",
               "statements": [
@@ -2689,30 +2689,30 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 3169,
+                        "id": 3221,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "baseExpression": {
-                            "id": 3164,
+                            "id": 3216,
                             "name": "gameRoles",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3133,
+                            "referencedDeclaration": 3185,
                             "src": "408:9:20",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                               "typeString": "mapping(address => bool)"
                             }
                           },
-                          "id": 3167,
+                          "id": 3219,
                           "indexExpression": {
                             "arguments": [],
                             "expression": {
                               "argumentTypes": [],
-                              "id": 3165,
+                              "id": 3217,
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
@@ -2723,7 +2723,7 @@
                                 "typeString": "function () view returns (address)"
                               }
                             },
-                            "id": 3166,
+                            "id": 3218,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -2753,7 +2753,7 @@
                         "operator": "==",
                         "rightExpression": {
                           "hexValue": "74727565",
-                          "id": 3168,
+                          "id": 3220,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2775,7 +2775,7 @@
                       },
                       {
                         "hexValue": "46756e666c6f776572204661726d3a20596f7520617265206e6f74207468652067616d65",
-                        "id": 3170,
+                        "id": 3222,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2801,7 +2801,7 @@
                           "typeString": "literal_string \"Funflower Farm: You are not the game\""
                         }
                       ],
-                      "id": 3163,
+                      "id": 3215,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -2815,7 +2815,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3171,
+                    "id": 3223,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2830,23 +2830,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3172,
+                  "id": 3224,
                   "nodeType": "ExpressionStatement",
                   "src": "400:80:20"
                 },
                 {
-                  "id": 3173,
+                  "id": 3225,
                   "nodeType": "PlaceholderStatement",
                   "src": "486:1:20"
                 }
               ]
             },
-            "id": 3175,
+            "id": 3227,
             "name": "onlyGame",
             "nameLocation": "385:8:20",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 3162,
+              "id": 3214,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "394:0:20"
@@ -2856,7 +2856,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 3177,
+        "scope": 3229,
         "src": "112:383:20",
         "usedErrors": []
       }
@@ -2869,7 +2869,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-05-16T21:02:23.603Z",
+  "updatedAt": "2022-05-17T13:50:37.654Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

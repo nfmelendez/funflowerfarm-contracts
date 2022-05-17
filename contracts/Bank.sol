@@ -16,12 +16,12 @@ contract Bank is GameOwnerUpgradeable, UUPSUpgradeable {
 
     mapping(bytes32 => bool) public executed;
 
-    // Farm ID to saved timestamp
     mapping(address => bytes32) public sessions;
     mapping(address => uint) public syncedAt;
 
     uint private withdrawFee;
     address private withdrawFeeWallet;
+    address private signer;
 
 
     FunflowerFarmToken private fffToken;
@@ -31,6 +31,7 @@ contract Bank is GameOwnerUpgradeable, UUPSUpgradeable {
         gameRoles[msg.sender] = true;
         withdrawFee = 1 * (10 ** 17); //0.1
         withdrawFeeWallet = _msgSender();
+        signer = _msgSender();
     }
 
     function setTokens(FunflowerFarmToken _fffToken) public onlyOwner {
@@ -39,6 +40,10 @@ contract Bank is GameOwnerUpgradeable, UUPSUpgradeable {
 
     function setWithdrawFee(uint _fee) public onlyOwner {
         withdrawFee = _fee;
+    }
+
+    function transferSigner(address _signer) public onlyOwner {
+        signer = _signer;
     }
 
     function transferWithdrawFeeWallet(address _team) public onlyOwner {
@@ -63,8 +68,13 @@ contract Bank is GameOwnerUpgradeable, UUPSUpgradeable {
         return keccak256(abi.encodePacked(_msgSender(), sessions[_address], block.number)).toEthSignedMessageHash();
     }
 
+    function verify(bytes32 hash, bytes memory signature) private view returns (bool) {
+        bytes32 ethSignedHash = hash.toEthSignedMessageHash();
+        return ethSignedHash.recover(signature) == signer;
+    }
+
     function withdraw(
-        //bytes memory signature,
+        bytes memory signature,
         bytes32 sessionId,
         uint256 fff) 
         payable public returns (bool) {
@@ -85,7 +95,7 @@ contract Bank is GameOwnerUpgradeable, UUPSUpgradeable {
         // Verify
         bytes32 txHash = keccak256(abi.encode(sessionId,  _msgSender(), fff));
         require(!executed[txHash], "Funflower Farm: Tx Executed");
-        //require(verify(txHash, signature), "Funflower Farm: Unauthorised");
+        require(verify(txHash, signature), "Funflower Farm: Unauthorised");
         executed[txHash] = true;
 
 

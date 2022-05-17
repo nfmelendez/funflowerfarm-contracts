@@ -1,5 +1,6 @@
 const TestSupport = require("./test-support");
 const { upgradeProxy } = require('@openzeppelin/truffle-upgrades');
+const BigNumber = require('bignumber.js');
 
 
 const FunflowerFarmToken = artifacts.require("FunflowerFarmToken");
@@ -23,7 +24,15 @@ contract("Bank contract", () => {
         from: TestSupport.accounts.TEAM.address
       })
 
-      await bank.withdraw(sessionId, 2, {from: TestSupport.accounts.TEAM.address, value: fee});
+      const fff = 2
+
+      const signature = await sign(web3, 
+        sessionId,
+        TestSupport.accounts.TEAM.address,
+        fff
+      );
+
+      await bank.withdraw(signature, sessionId, fff, {from: TestSupport.accounts.TEAM.address, value: fee});
 
       const fffTokenBalance = await fffToken.balanceOf.call(TestSupport.accounts.TEAM.address);
       assert.equal(fffTokenBalance.valueOf().toString(10), '500000000000000000000002');
@@ -53,7 +62,7 @@ contract("Bank contract", () => {
 
     it("withdraw 2 FFF with success", async () => {
       const fee = web3.utils.toWei("0.1");
-      var walletBalance = await web3.eth.getBalance(TestSupport.accounts.WITHDRAW_WALLET.address)
+      const walletBalance = await web3.eth.getBalance(TestSupport.accounts.WITHDRAW_WALLET.address)
       console.log('b ' + walletBalance)
       const bank = await Bank.deployed();
       const fffToken = await FunflowerFarmToken.deployed();
@@ -64,9 +73,19 @@ contract("Bank contract", () => {
       await bank.transferWithdrawFeeWallet(TestSupport.accounts.WITHDRAW_WALLET.address, {
         from: TestSupport.accounts.TEAM.address
       })
+
+      const fff = 2
+
+      const signature = await sign(web3, 
+        sessionId,
+        TestSupport.accounts.PLAYER.address,
+        fff
+      );
       
 
-      await bank.withdraw(sessionId, 2, {
+      console.log("Signature " + signature)
+
+      await bank.withdraw(signature, sessionId, fff, {
         from: TestSupport.accounts.PLAYER.address,
         value: fee
       });
@@ -79,9 +98,9 @@ contract("Bank contract", () => {
       var actualWalletBalance = await web3.eth.getBalance(TestSupport.accounts.WITHDRAW_WALLET.address)
 
       assert.equal('2', fffTokenBalance.valueOf().toString(10));
-      assert.equal("100100000000000000000", actualWalletBalance);
+      const expectedBalance = (new BigNumber(walletBalance).plus(new BigNumber(fee))).toFixed()
+      assert.equal(expectedBalance, actualWalletBalance);
       assert.notEqual(newSessionId, sessionId);
-
 
     });
 
@@ -92,7 +111,8 @@ contract("Bank contract", () => {
         from: TestSupport.accounts.PLAYER.address
       })  
 
-      const result = bank.withdraw(sessionId, 2, {
+      const anySignature = web3.utils.randomHex(32)
+      const result = bank.withdraw(anySignature, sessionId, 2, {
         from: TestSupport.accounts.PLAYER.address,
         value: fee
       });
@@ -104,14 +124,21 @@ contract("Bank contract", () => {
 
     });
 
-    it("Worng Session Id", async () => {
+    it("Wrong Session Id", async () => {
       const fee = web3.utils.toWei("0.1");
       const bank = await Bank.deployed();
-      const sessionId = await bank.getSessionId(TestSupport.accounts.PLAYER.address, {
+      const sessionId = await bank.getSessionId(TestSupport.accounts.TEAM.address, {
         from: TestSupport.accounts.PLAYER.address
       })  
 
-      const result = bank.withdraw(web3.utils.randomHex(32), 2, {
+      const fff = 2
+      const signature = await sign(web3, 
+        sessionId,
+        TestSupport.accounts.PLAYER.address,
+        fff
+      );
+
+      const result = bank.withdraw(signature, sessionId, fff, {
         from: TestSupport.accounts.PLAYER.address,
         value: fee
       });
@@ -123,5 +150,60 @@ contract("Bank contract", () => {
 
     });
 
+    it("Wrong Signature, player attemp to withdraw more than it has", async () => {
+      const fee = web3.utils.toWei("0.1");
+      const bank = await Bank.deployed();
+      const sessionId = await bank.getSessionId(TestSupport.accounts.PLAYER.address, {
+        from: TestSupport.accounts.PLAYER.address
+      })  
+
+      const fff = 2
+      const signature = await sign(web3, 
+        sessionId,
+        TestSupport.accounts.PLAYER.address,
+        fff
+      );
+
+      const result = bank.withdraw(signature, sessionId, 4, {
+        from: TestSupport.accounts.PLAYER.address,
+        value: fee
+      });
+
+       const e = await result.catch((e) => {
+         return e.reason;
+        })
+        assert.equal("Funflower Farm: Unauthorised", e);
+
+    });
+
   });
+
+  function encodeSyncFunction(web3, sessionId, addr, fff) {
+    return web3.utils.keccak256(
+      web3.eth.abi.encodeParameters(
+        [
+          "bytes32",
+          "address",
+          "uint256",
+        ],
+        [
+          sessionId,
+          addr,
+          fff,
+        ]
+      )
+    );
+  }
+
+  async function sign(web3, sessionId, addr, fff) {
+    const sha = encodeSyncFunction(web3, sessionId, addr, fff);
+    const { signature } = await web3.eth.accounts.sign(
+      sha,
+      TestSupport.accounts.TEAM.privateKey
+    );
+
+    return signature;
+  }
+
+
 });

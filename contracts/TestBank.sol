@@ -19,7 +19,8 @@ contract TestBank is GameOwnerUpgradeable, UUPSUpgradeable {
 
     uint private withdrawFee;
     address private withdrawFeeWallet;
-    
+    address private signer;
+
     FunflowerFarmToken private fffToken;
     TestToken private testToken;
 
