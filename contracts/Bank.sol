@@ -73,11 +73,13 @@ contract Bank is GameOwnerUpgradeable, UUPSUpgradeable {
         return ethSignedHash.recover(signature) == signer;
     }
 
-    function withdraw(
+    function withdraw (
         bytes memory signature,
         bytes32 sessionId,
-        uint256 fff) 
+        uint256 fff,
+        uint deadline) 
         payable public returns (bool) {
+        require(deadline >= block.timestamp, "Funflower Farm: Deadline Passed");
         require(msg.value >= withdrawFee, "Funflower Farm: Missing fee");
 
         // Check the session is new or has not changed (already saved or withdrew funds)
@@ -93,7 +95,7 @@ contract Bank is GameOwnerUpgradeable, UUPSUpgradeable {
         syncedAt[_msgSender()] = block.timestamp;
 
         // Verify
-        bytes32 txHash = keccak256(abi.encode(sessionId,  _msgSender(), fff));
+        bytes32 txHash = keccak256(abi.encode(sessionId,  _msgSender(), fff, deadline));
         require(!executed[txHash], "Funflower Farm: Tx Executed");
         require(verify(txHash, signature), "Funflower Farm: Unauthorised");
         executed[txHash] = true;

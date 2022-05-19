@@ -25,4 +25,6 @@ module.exports = async function (deployer, network, accounts) {
     await deployer.deploy(TestToken);
   }
 
+  console.log(`const contractAddress = {"bank" : "${bankProxy.address}", "fffToken" : "${fffToken.address}" }`)
+
 };

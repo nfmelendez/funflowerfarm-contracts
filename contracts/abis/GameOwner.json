@@ -80,9 +80,9 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_game\",\"type\":\"address\"}],\"name\":\"addGameRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_game\",\"type\":\"address\"}],\"name\":\"removeGameRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/GameOwner.sol\":\"GameOwner\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x24e0364e503a9bbde94c715d26573a76f14cd2a202d45f96f52134ab806b67b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e12cbaa7378fd9b62280e4e1d164bedcb4399ce238f5f98fc0eefb7e50577981\",\"dweb:/ipfs/QmXRoFGUgfsaRkoPT5bxNMtSayKTQ8GZATLPXf69HcRA51\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"project:/contracts/GameOwner.sol\":{\"keccak256\":\"0x845d145489804963f50d0d4c71a37a392fe58b8217bb94a4bea97fb8cd7e3eee\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ea00b0290ae688faf3b6488e106907d72ea56397b256dd790858b53be0a6c405\",\"dweb:/ipfs/QmRPSmtqYpav425qstkm7F5htNrfRJ8xNAavKP2L7ouwhB\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5061002d61002261003260201b60201c565b61003a60201b60201c565b6100fe565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b6106f88061010d6000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806319892b511461005c578063715018a6146100785780637323b8fa146100825780638da5cb5b1461009e578063f2fde38b146100bc575b600080fd5b6100766004803603810190610071919061055c565b6100d8565b005b6100806101af565b005b61009c6004803603810190610097919061055c565b610237565b005b6100a661030d565b6040516100b39190610598565b60405180910390f35b6100d660048036038101906100d1919061055c565b610336565b005b6100e061042d565b73ffffffffffffffffffffffffffffffffffffffff166100fe61030d565b73ffffffffffffffffffffffffffffffffffffffff1614610154576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161014b90610610565b60405180910390fd5b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b6101b761042d565b73ffffffffffffffffffffffffffffffffffffffff166101d561030d565b73ffffffffffffffffffffffffffffffffffffffff161461022b576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161022290610610565b60405180910390fd5b6102356000610435565b565b61023f61042d565b73ffffffffffffffffffffffffffffffffffffffff1661025d61030d565b73ffffffffffffffffffffffffffffffffffffffff16146102b3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016102aa90610610565b60405180910390fd5b60018060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b61033e61042d565b73ffffffffffffffffffffffffffffffffffffffff1661035c61030d565b73ffffffffffffffffffffffffffffffffffffffff16146103b2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016103a990610610565b60405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1603610421576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610418906106a2565b60405180910390fd5b61042a81610435565b50565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610529826104fe565b9050919050565b6105398161051e565b811461054457600080fd5b50565b60008135905061055681610530565b92915050565b600060208284031215610572576105716104f9565b5b600061058084828501610547565b91505092915050565b6105928161051e565b82525050565b60006020820190506105ad6000830184610589565b92915050565b600082825260208201905092915050565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572600082015250565b60006105fa6020836105b3565b9150610605826105c4565b602082019050919050565b60006020820190508181036000830152610629816105ed565b9050919050565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160008201527f6464726573730000000000000000000000000000000000000000000000000000602082015250565b600061068c6026836105b3565b915061069782610630565b604082019050919050565b600060208201905081810360008301526106bb8161067f565b905091905056fea2646970667358221220894829e9637fd51f583af69c4e07a174b3475f1a1e676cd251e1637add2c8a3e64736f6c634300080d0033",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806319892b511461005c578063715018a6146100785780637323b8fa146100825780638da5cb5b1461009e578063f2fde38b146100bc575b600080fd5b6100766004803603810190610071919061055c565b6100d8565b005b6100806101af565b005b61009c6004803603810190610097919061055c565b610237565b005b6100a661030d565b6040516100b39190610598565b60405180910390f35b6100d660048036038101906100d1919061055c565b610336565b005b6100e061042d565b73ffffffffffffffffffffffffffffffffffffffff166100fe61030d565b73ffffffffffffffffffffffffffffffffffffffff1614610154576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161014b90610610565b60405180910390fd5b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b6101b761042d565b73ffffffffffffffffffffffffffffffffffffffff166101d561030d565b73ffffffffffffffffffffffffffffffffffffffff161461022b576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161022290610610565b60405180910390fd5b6102356000610435565b565b61023f61042d565b73ffffffffffffffffffffffffffffffffffffffff1661025d61030d565b73ffffffffffffffffffffffffffffffffffffffff16146102b3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016102aa90610610565b60405180910390fd5b60018060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b61033e61042d565b73ffffffffffffffffffffffffffffffffffffffff1661035c61030d565b73ffffffffffffffffffffffffffffffffffffffff16146103b2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016103a990610610565b60405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1603610421576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610418906106a2565b60405180910390fd5b61042a81610435565b50565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610529826104fe565b9050919050565b6105398161051e565b811461054457600080fd5b50565b60008135905061055681610530565b92915050565b600060208284031215610572576105716104f9565b5b600061058084828501610547565b91505092915050565b6105928161051e565b82525050565b60006020820190506105ad6000830184610589565b92915050565b600082825260208201905092915050565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572600082015250565b60006105fa6020836105b3565b9150610605826105c4565b602082019050919050565b60006020820190508181036000830152610629816105ed565b9050919050565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160008201527f6464726573730000000000000000000000000000000000000000000000000000602082015250565b600061068c6026836105b3565b915061069782610630565b604082019050919050565b600060208201905081810360008301526106bb8161067f565b905091905056fea2646970667358221220894829e9637fd51f583af69c4e07a174b3475f1a1e676cd251e1637add2c8a3e64736f6c634300080d0033",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_game\",\"type\":\"address\"}],\"name\":\"addGameRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_game\",\"type\":\"address\"}],\"name\":\"removeGameRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/GameOwner.sol\":\"GameOwner\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x24e0364e503a9bbde94c715d26573a76f14cd2a202d45f96f52134ab806b67b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e12cbaa7378fd9b62280e4e1d164bedcb4399ce238f5f98fc0eefb7e50577981\",\"dweb:/ipfs/QmXRoFGUgfsaRkoPT5bxNMtSayKTQ8GZATLPXf69HcRA51\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"project:/contracts/GameOwner.sol\":{\"keccak256\":\"0x845d145489804963f50d0d4c71a37a392fe58b8217bb94a4bea97fb8cd7e3eee\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ea00b0290ae688faf3b6488e106907d72ea56397b256dd790858b53be0a6c405\",\"dweb:/ipfs/QmRPSmtqYpav425qstkm7F5htNrfRJ8xNAavKP2L7ouwhB\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061002d61002261003260201b60201c565b61003a60201b60201c565b6100fe565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b6106f88061010d6000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806319892b511461005c578063715018a6146100785780637323b8fa146100825780638da5cb5b1461009e578063f2fde38b146100bc575b600080fd5b6100766004803603810190610071919061055c565b6100d8565b005b6100806101af565b005b61009c6004803603810190610097919061055c565b610237565b005b6100a661030d565b6040516100b39190610598565b60405180910390f35b6100d660048036038101906100d1919061055c565b610336565b005b6100e061042d565b73ffffffffffffffffffffffffffffffffffffffff166100fe61030d565b73ffffffffffffffffffffffffffffffffffffffff1614610154576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161014b90610610565b60405180910390fd5b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b6101b761042d565b73ffffffffffffffffffffffffffffffffffffffff166101d561030d565b73ffffffffffffffffffffffffffffffffffffffff161461022b576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161022290610610565b60405180910390fd5b6102356000610435565b565b61023f61042d565b73ffffffffffffffffffffffffffffffffffffffff1661025d61030d565b73ffffffffffffffffffffffffffffffffffffffff16146102b3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016102aa90610610565b60405180910390fd5b60018060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b61033e61042d565b73ffffffffffffffffffffffffffffffffffffffff1661035c61030d565b73ffffffffffffffffffffffffffffffffffffffff16146103b2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016103a990610610565b60405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1603610421576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610418906106a2565b60405180910390fd5b61042a81610435565b50565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610529826104fe565b9050919050565b6105398161051e565b811461054457600080fd5b50565b60008135905061055681610530565b92915050565b600060208284031215610572576105716104f9565b5b600061058084828501610547565b91505092915050565b6105928161051e565b82525050565b60006020820190506105ad6000830184610589565b92915050565b600082825260208201905092915050565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572600082015250565b60006105fa6020836105b3565b9150610605826105c4565b602082019050919050565b60006020820190508181036000830152610629816105ed565b9050919050565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160008201527f6464726573730000000000000000000000000000000000000000000000000000602082015250565b600061068c6026836105b3565b915061069782610630565b604082019050919050565b600060208201905081810360008301526106bb8161067f565b905091905056fea2646970667358221220ba7053775cba0b55d00bd4e07b4580db2bdf2e69518c3e2d3a07910085c6169a64736f6c634300080e0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806319892b511461005c578063715018a6146100785780637323b8fa146100825780638da5cb5b1461009e578063f2fde38b146100bc575b600080fd5b6100766004803603810190610071919061055c565b6100d8565b005b6100806101af565b005b61009c6004803603810190610097919061055c565b610237565b005b6100a661030d565b6040516100b39190610598565b60405180910390f35b6100d660048036038101906100d1919061055c565b610336565b005b6100e061042d565b73ffffffffffffffffffffffffffffffffffffffff166100fe61030d565b73ffffffffffffffffffffffffffffffffffffffff1614610154576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161014b90610610565b60405180910390fd5b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b6101b761042d565b73ffffffffffffffffffffffffffffffffffffffff166101d561030d565b73ffffffffffffffffffffffffffffffffffffffff161461022b576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161022290610610565b60405180910390fd5b6102356000610435565b565b61023f61042d565b73ffffffffffffffffffffffffffffffffffffffff1661025d61030d565b73ffffffffffffffffffffffffffffffffffffffff16146102b3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016102aa90610610565b60405180910390fd5b60018060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b61033e61042d565b73ffffffffffffffffffffffffffffffffffffffff1661035c61030d565b73ffffffffffffffffffffffffffffffffffffffff16146103b2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016103a990610610565b60405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1603610421576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610418906106a2565b60405180910390fd5b61042a81610435565b50565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610529826104fe565b9050919050565b6105398161051e565b811461054457600080fd5b50565b60008135905061055681610530565b92915050565b600060208284031215610572576105716104f9565b5b600061058084828501610547565b91505092915050565b6105928161051e565b82525050565b60006020820190506105ad6000830184610589565b92915050565b600082825260208201905092915050565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572600082015250565b60006105fa6020836105b3565b9150610605826105c4565b602082019050919050565b60006020820190508181036000830152610629816105ed565b9050919050565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160008201527f6464726573730000000000000000000000000000000000000000000000000000602082015250565b600061068c6026836105b3565b915061069782610630565b604082019050919050565b600060208201905081810360008301526106bb8161067f565b905091905056fea2646970667358221220ba7053775cba0b55d00bd4e07b4580db2bdf2e69518c3e2d3a07910085c6169a64736f6c634300080e0033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [
@@ -1666,18 +1666,18 @@
         2082
       ],
       "GameOwner": [
-        3228
+        3239
       ],
       "Ownable": [
         1240
       ]
     },
-    "id": 3229,
+    "id": 3240,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3178,
+        "id": 3189,
         "literals": [
           "solidity",
           "^",
@@ -1690,10 +1690,10 @@
       {
         "absolutePath": "@openzeppelin/contracts/access/Ownable.sol",
         "file": "@openzeppelin/contracts/access/Ownable.sol",
-        "id": 3179,
+        "id": 3190,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 3229,
+        "scope": 3240,
         "sourceUnit": 1241,
         "src": "57:52:20",
         "symbolAliases": [],
@@ -1704,13 +1704,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 3180,
+              "id": 3191,
               "name": "Ownable",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 1240,
               "src": "134:7:20"
             },
-            "id": 3181,
+            "id": 3192,
             "nodeType": "InheritanceSpecifier",
             "src": "134:7:20"
           }
@@ -1719,9 +1719,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 3228,
+        "id": 3239,
         "linearizedBaseContracts": [
-          3228,
+          3239,
           1240,
           2082
         ],
@@ -1731,12 +1731,12 @@
         "nodes": [
           {
             "constant": false,
-            "id": 3185,
+            "id": 3196,
             "mutability": "mutable",
             "name": "gameRoles",
             "nameLocation": "172:9:20",
             "nodeType": "VariableDeclaration",
-            "scope": 3228,
+            "scope": 3239,
             "src": "146:35:20",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1745,9 +1745,9 @@
               "typeString": "mapping(address => bool)"
             },
             "typeName": {
-              "id": 3184,
+              "id": 3195,
               "keyType": {
-                "id": 3182,
+                "id": 3193,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "155:7:20",
@@ -1763,7 +1763,7 @@
                 "typeString": "mapping(address => bool)"
               },
               "valueType": {
-                "id": 3183,
+                "id": 3194,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "166:4:20",
@@ -1777,37 +1777,37 @@
           },
           {
             "body": {
-              "id": 3198,
+              "id": 3209,
               "nodeType": "Block",
               "src": "239:36:20",
               "statements": [
                 {
                   "expression": {
-                    "id": 3196,
+                    "id": 3207,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 3192,
+                        "id": 3203,
                         "name": "gameRoles",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3185,
+                        "referencedDeclaration": 3196,
                         "src": "247:9:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 3194,
+                      "id": 3205,
                       "indexExpression": {
-                        "id": 3193,
+                        "id": 3204,
                         "name": "_game",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3187,
+                        "referencedDeclaration": 3198,
                         "src": "257:5:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1829,7 +1829,7 @@
                     "operator": "=",
                     "rightHandSide": {
                       "hexValue": "74727565",
-                      "id": 3195,
+                      "id": 3206,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1849,22 +1849,22 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3197,
+                  "id": 3208,
                   "nodeType": "ExpressionStatement",
                   "src": "247:23:20"
                 }
               ]
             },
             "functionSelector": "7323b8fa",
-            "id": 3199,
+            "id": 3210,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 3190,
+                "id": 3201,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 3189,
+                  "id": 3200,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 1182,
@@ -1878,17 +1878,17 @@
             "nameLocation": "195:11:20",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3188,
+              "id": 3199,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3187,
+                  "id": 3198,
                   "mutability": "mutable",
                   "name": "_game",
                   "nameLocation": "215:5:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3199,
+                  "scope": 3210,
                   "src": "207:13:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1897,7 +1897,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3186,
+                    "id": 3197,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "207:7:20",
@@ -1913,12 +1913,12 @@
               "src": "206:15:20"
             },
             "returnParameters": {
-              "id": 3191,
+              "id": 3202,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "239:0:20"
             },
-            "scope": 3228,
+            "scope": 3239,
             "src": "186:89:20",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -1926,37 +1926,37 @@
           },
           {
             "body": {
-              "id": 3212,
+              "id": 3223,
               "nodeType": "Block",
               "src": "335:37:20",
               "statements": [
                 {
                   "expression": {
-                    "id": 3210,
+                    "id": 3221,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 3206,
+                        "id": 3217,
                         "name": "gameRoles",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3185,
+                        "referencedDeclaration": 3196,
                         "src": "343:9:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 3208,
+                      "id": 3219,
                       "indexExpression": {
-                        "id": 3207,
+                        "id": 3218,
                         "name": "_game",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3201,
+                        "referencedDeclaration": 3212,
                         "src": "353:5:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1978,7 +1978,7 @@
                     "operator": "=",
                     "rightHandSide": {
                       "hexValue": "66616c7365",
-                      "id": 3209,
+                      "id": 3220,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1998,22 +1998,22 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3211,
+                  "id": 3222,
                   "nodeType": "ExpressionStatement",
                   "src": "343:24:20"
                 }
               ]
             },
             "functionSelector": "19892b51",
-            "id": 3213,
+            "id": 3224,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 3204,
+                "id": 3215,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 3203,
+                  "id": 3214,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 1182,
@@ -2027,17 +2027,17 @@
             "nameLocation": "288:14:20",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3202,
+              "id": 3213,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3201,
+                  "id": 3212,
                   "mutability": "mutable",
                   "name": "_game",
                   "nameLocation": "311:5:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3213,
+                  "scope": 3224,
                   "src": "303:13:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2046,7 +2046,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3200,
+                    "id": 3211,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "303:7:20",
@@ -2062,12 +2062,12 @@
               "src": "302:15:20"
             },
             "returnParameters": {
-              "id": 3205,
+              "id": 3216,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "335:0:20"
             },
-            "scope": 3228,
+            "scope": 3239,
             "src": "279:93:20",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -2075,7 +2075,7 @@
           },
           {
             "body": {
-              "id": 3226,
+              "id": 3237,
               "nodeType": "Block",
               "src": "394:98:20",
               "statements": [
@@ -2087,30 +2087,30 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 3221,
+                        "id": 3232,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "baseExpression": {
-                            "id": 3216,
+                            "id": 3227,
                             "name": "gameRoles",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3185,
+                            "referencedDeclaration": 3196,
                             "src": "408:9:20",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                               "typeString": "mapping(address => bool)"
                             }
                           },
-                          "id": 3219,
+                          "id": 3230,
                           "indexExpression": {
                             "arguments": [],
                             "expression": {
                               "argumentTypes": [],
-                              "id": 3217,
+                              "id": 3228,
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
@@ -2121,7 +2121,7 @@
                                 "typeString": "function () view returns (address)"
                               }
                             },
-                            "id": 3218,
+                            "id": 3229,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -2151,7 +2151,7 @@
                         "operator": "==",
                         "rightExpression": {
                           "hexValue": "74727565",
-                          "id": 3220,
+                          "id": 3231,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2173,7 +2173,7 @@
                       },
                       {
                         "hexValue": "46756e666c6f776572204661726d3a20596f7520617265206e6f74207468652067616d65",
-                        "id": 3222,
+                        "id": 3233,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2199,7 +2199,7 @@
                           "typeString": "literal_string \"Funflower Farm: You are not the game\""
                         }
                       ],
-                      "id": 3215,
+                      "id": 3226,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -2213,7 +2213,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3223,
+                    "id": 3234,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2228,23 +2228,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3224,
+                  "id": 3235,
                   "nodeType": "ExpressionStatement",
                   "src": "400:80:20"
                 },
                 {
-                  "id": 3225,
+                  "id": 3236,
                   "nodeType": "PlaceholderStatement",
                   "src": "486:1:20"
                 }
               ]
             },
-            "id": 3227,
+            "id": 3238,
             "name": "onlyGame",
             "nameLocation": "385:8:20",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 3214,
+              "id": 3225,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "394:0:20"
@@ -2254,7 +2254,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 3229,
+        "scope": 3240,
         "src": "112:383:20",
         "usedErrors": []
       }
@@ -2268,18 +2268,18 @@
         2082
       ],
       "GameOwner": [
-        3228
+        3239
       ],
       "Ownable": [
         1240
       ]
     },
-    "id": 3229,
+    "id": 3240,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3178,
+        "id": 3189,
         "literals": [
           "solidity",
           "^",
@@ -2292,10 +2292,10 @@
       {
         "absolutePath": "@openzeppelin/contracts/access/Ownable.sol",
         "file": "@openzeppelin/contracts/access/Ownable.sol",
-        "id": 3179,
+        "id": 3190,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 3229,
+        "scope": 3240,
         "sourceUnit": 1241,
         "src": "57:52:20",
         "symbolAliases": [],
@@ -2306,13 +2306,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 3180,
+              "id": 3191,
               "name": "Ownable",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 1240,
               "src": "134:7:20"
             },
-            "id": 3181,
+            "id": 3192,
             "nodeType": "InheritanceSpecifier",
             "src": "134:7:20"
           }
@@ -2321,9 +2321,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 3228,
+        "id": 3239,
         "linearizedBaseContracts": [
-          3228,
+          3239,
           1240,
           2082
         ],
@@ -2333,12 +2333,12 @@
         "nodes": [
           {
             "constant": false,
-            "id": 3185,
+            "id": 3196,
             "mutability": "mutable",
             "name": "gameRoles",
             "nameLocation": "172:9:20",
             "nodeType": "VariableDeclaration",
-            "scope": 3228,
+            "scope": 3239,
             "src": "146:35:20",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2347,9 +2347,9 @@
               "typeString": "mapping(address => bool)"
             },
             "typeName": {
-              "id": 3184,
+              "id": 3195,
               "keyType": {
-                "id": 3182,
+                "id": 3193,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "155:7:20",
@@ -2365,7 +2365,7 @@
                 "typeString": "mapping(address => bool)"
               },
               "valueType": {
-                "id": 3183,
+                "id": 3194,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "166:4:20",
@@ -2379,37 +2379,37 @@
           },
           {
             "body": {
-              "id": 3198,
+              "id": 3209,
               "nodeType": "Block",
               "src": "239:36:20",
               "statements": [
                 {
                   "expression": {
-                    "id": 3196,
+                    "id": 3207,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 3192,
+                        "id": 3203,
                         "name": "gameRoles",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3185,
+                        "referencedDeclaration": 3196,
                         "src": "247:9:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 3194,
+                      "id": 3205,
                       "indexExpression": {
-                        "id": 3193,
+                        "id": 3204,
                         "name": "_game",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3187,
+                        "referencedDeclaration": 3198,
                         "src": "257:5:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2431,7 +2431,7 @@
                     "operator": "=",
                     "rightHandSide": {
                       "hexValue": "74727565",
-                      "id": 3195,
+                      "id": 3206,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2451,22 +2451,22 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3197,
+                  "id": 3208,
                   "nodeType": "ExpressionStatement",
                   "src": "247:23:20"
                 }
               ]
             },
             "functionSelector": "7323b8fa",
-            "id": 3199,
+            "id": 3210,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 3190,
+                "id": 3201,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 3189,
+                  "id": 3200,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 1182,
@@ -2480,17 +2480,17 @@
             "nameLocation": "195:11:20",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3188,
+              "id": 3199,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3187,
+                  "id": 3198,
                   "mutability": "mutable",
                   "name": "_game",
                   "nameLocation": "215:5:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3199,
+                  "scope": 3210,
                   "src": "207:13:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2499,7 +2499,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3186,
+                    "id": 3197,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "207:7:20",
@@ -2515,12 +2515,12 @@
               "src": "206:15:20"
             },
             "returnParameters": {
-              "id": 3191,
+              "id": 3202,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "239:0:20"
             },
-            "scope": 3228,
+            "scope": 3239,
             "src": "186:89:20",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -2528,37 +2528,37 @@
           },
           {
             "body": {
-              "id": 3212,
+              "id": 3223,
               "nodeType": "Block",
               "src": "335:37:20",
               "statements": [
                 {
                   "expression": {
-                    "id": 3210,
+                    "id": 3221,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 3206,
+                        "id": 3217,
                         "name": "gameRoles",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3185,
+                        "referencedDeclaration": 3196,
                         "src": "343:9:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 3208,
+                      "id": 3219,
                       "indexExpression": {
-                        "id": 3207,
+                        "id": 3218,
                         "name": "_game",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3201,
+                        "referencedDeclaration": 3212,
                         "src": "353:5:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2580,7 +2580,7 @@
                     "operator": "=",
                     "rightHandSide": {
                       "hexValue": "66616c7365",
-                      "id": 3209,
+                      "id": 3220,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2600,22 +2600,22 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3211,
+                  "id": 3222,
                   "nodeType": "ExpressionStatement",
                   "src": "343:24:20"
                 }
               ]
             },
             "functionSelector": "19892b51",
-            "id": 3213,
+            "id": 3224,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 3204,
+                "id": 3215,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 3203,
+                  "id": 3214,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 1182,
@@ -2629,17 +2629,17 @@
             "nameLocation": "288:14:20",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3202,
+              "id": 3213,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3201,
+                  "id": 3212,
                   "mutability": "mutable",
                   "name": "_game",
                   "nameLocation": "311:5:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3213,
+                  "scope": 3224,
                   "src": "303:13:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2648,7 +2648,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3200,
+                    "id": 3211,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "303:7:20",
@@ -2664,12 +2664,12 @@
               "src": "302:15:20"
             },
             "returnParameters": {
-              "id": 3205,
+              "id": 3216,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "335:0:20"
             },
-            "scope": 3228,
+            "scope": 3239,
             "src": "279:93:20",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -2677,7 +2677,7 @@
           },
           {
             "body": {
-              "id": 3226,
+              "id": 3237,
               "nodeType": "Block",
               "src": "394:98:20",
               "statements": [
@@ -2689,30 +2689,30 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 3221,
+                        "id": 3232,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "baseExpression": {
-                            "id": 3216,
+                            "id": 3227,
                             "name": "gameRoles",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3185,
+                            "referencedDeclaration": 3196,
                             "src": "408:9:20",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                               "typeString": "mapping(address => bool)"
                             }
                           },
-                          "id": 3219,
+                          "id": 3230,
                           "indexExpression": {
                             "arguments": [],
                             "expression": {
                               "argumentTypes": [],
-                              "id": 3217,
+                              "id": 3228,
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
@@ -2723,7 +2723,7 @@
                                 "typeString": "function () view returns (address)"
                               }
                             },
-                            "id": 3218,
+                            "id": 3229,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -2753,7 +2753,7 @@
                         "operator": "==",
                         "rightExpression": {
                           "hexValue": "74727565",
-                          "id": 3220,
+                          "id": 3231,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2775,7 +2775,7 @@
                       },
                       {
                         "hexValue": "46756e666c6f776572204661726d3a20596f7520617265206e6f74207468652067616d65",
-                        "id": 3222,
+                        "id": 3233,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2801,7 +2801,7 @@
                           "typeString": "literal_string \"Funflower Farm: You are not the game\""
                         }
                       ],
-                      "id": 3215,
+                      "id": 3226,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -2815,7 +2815,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3223,
+                    "id": 3234,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2830,23 +2830,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3224,
+                  "id": 3235,
                   "nodeType": "ExpressionStatement",
                   "src": "400:80:20"
                 },
                 {
-                  "id": 3225,
+                  "id": 3236,
                   "nodeType": "PlaceholderStatement",
                   "src": "486:1:20"
                 }
               ]
             },
-            "id": 3227,
+            "id": 3238,
             "name": "onlyGame",
             "nameLocation": "385:8:20",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 3214,
+              "id": 3225,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "394:0:20"
@@ -2856,7 +2856,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 3229,
+        "scope": 3240,
         "src": "112:383:20",
         "usedErrors": []
       }
@@ -2865,11 +2865,11 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
+    "version": "0.8.14+commit.80d49f37.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-05-17T13:50:37.654Z",
+  "updatedAt": "2022-05-19T18:07:01.206Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

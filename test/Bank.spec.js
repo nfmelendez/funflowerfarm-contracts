@@ -11,6 +11,8 @@ const TestBank = artifacts.require("TestBank");
 
 contract("Bank contract", () => {
 
+  const validDeadline = 10000000000000
+
   contract("Upgrade", accounts  => {
 
     it("Add another ERC20 token to the game", async () => {
@@ -29,10 +31,11 @@ contract("Bank contract", () => {
       const signature = await sign(web3, 
         sessionId,
         TestSupport.accounts.TEAM.address,
-        fff
+        fff,
+        validDeadline
       );
 
-      await bank.withdraw(signature, sessionId, fff, {from: TestSupport.accounts.TEAM.address, value: fee});
+      await bank.withdraw(signature, sessionId, fff, validDeadline, {from: TestSupport.accounts.TEAM.address, value: fee});
 
       const fffTokenBalance = await fffToken.balanceOf.call(TestSupport.accounts.TEAM.address);
       assert.equal(fffTokenBalance.valueOf().toString(10), '500000000000000000000002');
@@ -79,13 +82,14 @@ contract("Bank contract", () => {
       const signature = await sign(web3, 
         sessionId,
         TestSupport.accounts.PLAYER.address,
-        fff
+        fff,
+        validDeadline
       );
       
 
       console.log("Signature " + signature)
 
-      await bank.withdraw(signature, sessionId, fff, {
+      await bank.withdraw(signature, sessionId, fff, validDeadline, {
         from: TestSupport.accounts.PLAYER.address,
         value: fee
       });
@@ -112,7 +116,7 @@ contract("Bank contract", () => {
       })  
 
       const anySignature = web3.utils.randomHex(32)
-      const result = bank.withdraw(anySignature, sessionId, 2, {
+      const result = bank.withdraw(anySignature, sessionId, 2, validDeadline, {
         from: TestSupport.accounts.PLAYER.address,
         value: fee
       });
@@ -121,6 +125,35 @@ contract("Bank contract", () => {
          return e.reason;
         })
         assert.equal("Funflower Farm: Missing fee", e);
+
+    });
+
+    it("withdraw with deadline", async () => {
+      const fee = web3.utils.toWei("0.01");
+      const bank = await Bank.deployed();
+      const sessionId = await bank.getSessionId(TestSupport.accounts.PLAYER.address, {
+        from: TestSupport.accounts.PLAYER.address
+      })  
+
+      // 10 seconds to late :(
+      const deadline = Math.floor(Date.now() / 1000 - 10);
+      
+      const signature = await sign(web3, 
+        sessionId,
+        TestSupport.accounts.PLAYER.address,
+        fee,
+        deadline
+      );
+
+      const result = bank.withdraw(signature, sessionId, fee, deadline, {
+        from: TestSupport.accounts.PLAYER.address,
+        value: fee
+      });
+
+       const e = await result.catch((e) => {
+         return e.reason;
+        })
+      assert.equal("Funflower Farm: Deadline Passed", e);
 
     });
 
@@ -135,10 +168,11 @@ contract("Bank contract", () => {
       const signature = await sign(web3, 
         sessionId,
         TestSupport.accounts.PLAYER.address,
-        fff
+        fff,
+        validDeadline,
       );
 
-      const result = bank.withdraw(signature, sessionId, fff, {
+      const result = bank.withdraw(signature, sessionId, fff, validDeadline, {
         from: TestSupport.accounts.PLAYER.address,
         value: fee
       });
@@ -161,10 +195,11 @@ contract("Bank contract", () => {
       const signature = await sign(web3, 
         sessionId,
         TestSupport.accounts.PLAYER.address,
-        fff
+        fff,
+        validDeadline
       );
 
-      const result = bank.withdraw(signature, sessionId, 4, {
+      const result = bank.withdraw(signature, sessionId, 4, validDeadline, {
         from: TestSupport.accounts.PLAYER.address,
         value: fee
       });
@@ -178,25 +213,27 @@ contract("Bank contract", () => {
 
   });
 
-  function encodeSyncFunction(web3, sessionId, addr, fff) {
+  function encodeSyncFunction(web3, sessionId, addr, fff, deadline) {
     return web3.utils.keccak256(
       web3.eth.abi.encodeParameters(
         [
           "bytes32",
           "address",
           "uint256",
+          "uint",
         ],
         [
           sessionId,
           addr,
           fff,
+          deadline,
         ]
       )
     );
   }
 
-  async function sign(web3, sessionId, addr, fff) {
-    const sha = encodeSyncFunction(web3, sessionId, addr, fff);
+  async function sign(web3, sessionId, addr, fff, deadline) {
+    const sha = encodeSyncFunction(web3, sessionId, addr, fff, deadline);
     const { signature } = await web3.eth.accounts.sign(
       sha,
       TestSupport.accounts.TEAM.privateKey
