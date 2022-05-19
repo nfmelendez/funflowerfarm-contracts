@@ -133,7 +133,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -146,7 +147,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -159,7 +161,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -198,7 +201,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -217,7 +221,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -261,7 +266,8 @@
       "name": "upgradeToAndCall",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [],
@@ -339,7 +345,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -373,7 +380,8 @@
         }
       ],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"previousAdmin\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"AdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beacon\",\"type\":\"address\"}],\"name\":\"BeaconUpgraded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"sessionId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"thxId\",\"type\":\"bytes32\"}],\"name\":\"SessionChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"Upgraded\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_game\",\"type\":\"address\"}],\"name\":\"addGameRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"executed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"getSessionId\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"proxiableUUID\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_game\",\"type\":\"address\"}],\"name\":\"removeGameRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"sessions\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract FunflowerFarmToken\",\"name\":\"_fffToken\",\"type\":\"address\"}],\"name\":\"setTokens\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_fee\",\"type\":\"uint256\"}],\"name\":\"setWithdrawFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"syncedAt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_signer\",\"type\":\"address\"}],\"name\":\"transferSigner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_team\",\"type\":\"address\"}],\"name\":\"transferWithdrawFeeWallet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"}],\"name\":\"upgradeTo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"upgradeToAndCall\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"},{\"internalType\":\"bytes32\",\"name\":\"sessionId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"fff\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"proxiableUUID()\":{\"details\":\"Implementation of the ERC1822 {proxiableUUID} function. This returns the storage slot used by the implementation. It is used to validate that the this implementation remains valid after an upgrade. IMPORTANT: A proxy pointing at a proxiable contract should not be considered proxiable itself, because this risks bricking a proxy that upgrades to it, by delegating to itself until out of gas. Thus it is critical that this function revert if invoked through a proxy. This is guaranteed by the `notDelegated` modifier.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"},\"upgradeTo(address)\":{\"details\":\"Upgrade the implementation of the proxy to `newImplementation`. Calls {_authorizeUpgrade}. Emits an {Upgraded} event.\"},\"upgradeToAndCall(address,bytes)\":{\"details\":\"Upgrade the implementation of the proxy to `newImplementation`, and subsequently execute the function call encoded in `data`. Calls {_authorizeUpgrade}. Emits an {Upgraded} event.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Bank.sol\":\"Bank\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\":{\"keccak256\":\"0x652fee292f698d8dba81bf287cb71f1682f6483b67ebe601a5f7387dcfc30b34\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://98c7bba29bcab7240cdaada7dd7cbe3529fec83314801270c46239e72a9e84d7\",\"dweb:/ipfs/QmfHCc1KMygjXchXVwafWTkFjhbb2SQ3Cu5GzRTdV4CCCh\"]},\"@openzeppelin/contracts-upgradeable/interfaces/draft-IERC1822Upgradeable.sol\":{\"keccak256\":\"0x77c89f893e403efc6929ba842b7ccf6534d4ffe03afe31670b4a528c0ad78c0f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://496bd9b3df2455d571018c09f0c6badd29713fdeb907c6aa09d8d28cb603f053\",\"dweb:/ipfs/QmXdJDyYs6WMwMh21dez2BYPxhSUaUYFMDtVNcn2cgFR79\"]},\"@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol\":{\"keccak256\":\"0x315887e846f1e5f8d8fa535a229d318bb9290aaa69485117f1ee8a9a6b3be823\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://29dda00da6d269685b555e710e4abf1c3eb6d00c15b888a7880a2f8dd3c4fdc2\",\"dweb:/ipfs/QmSqcjtdECygtT1Gy7uEo42x8542srpgGEeKKHfcnQqXgn\"]},\"@openzeppelin/contracts-upgradeable/proxy/beacon/IBeaconUpgradeable.sol\":{\"keccak256\":\"0x24b86ac8c005b8c654fbf6ac34a5a4f61580d7273541e83e013e89d66fbf0908\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4dbfe1a3b3b3fb64294ce41fd2ad362e7b7012208117864f42c1a67620a6d5c1\",\"dweb:/ipfs/QmVMU5tWt7zBQMmf5cpMX8UMHV86T3kFeTxBTBjFqVWfoJ\"]},\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x7454006cccb737612b00104d2f606d728e2818b778e7e55542f063c614ce46ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6ec10894beb0f7537fba35e501fd1c5d35440e8c8f5ced1b8e57722a1d0879a8\",\"dweb:/ipfs/Qmbc3bNmtDewTGSmrPD93Ubp8saAz8xCxsgTjSmpNTqukz\"]},\"@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol\":{\"keccak256\":\"0x6e36e9b4b71de699c2f3f0d4e4d1aa0b35da99a26e8d5b91ef09ba234b4ef270\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://abfa467c53a0d60b4d09bf04aa952b1d1d44e5766fcc053aace078d7859b8419\",\"dweb:/ipfs/QmebVTZpyNxYfKYTuLMywzEJTdc1Ca8ME4xm3kR9gQgToG\"]},\"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0x55cf2bd9fc76704ddcdc19834cd288b7de00fc0f298a40ea16a954ae8991db2d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://37e4df53c8d2e3c1062c1c7b2c17366db7de03bfd2559d340ca95c588aa49c2f\",\"dweb:/ipfs/QmQ9vsG3o4wED3FRogiSUhdzJvZSjjYFtydzXvFEJtgZk4\"]},\"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c\",\"dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a\"]},\"@openzeppelin/contracts-upgradeable/utils/StorageSlotUpgradeable.sol\":{\"keccak256\":\"0x422c3d27d0d5681cea93acbb0dcb175fa5b461b5b7731da7ff77e51f0f0174c7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://feb47206935cf956f60ffd76b8bad047102c7acbf2aab10157a235b7af66fa39\",\"dweb:/ipfs/QmZQ39kpPhCdN9fyZ7BMwnK26tHjiP6QZDeL8tMSPDjxan\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x24e0364e503a9bbde94c715d26573a76f14cd2a202d45f96f52134ab806b67b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e12cbaa7378fd9b62280e4e1d164bedcb4399ce238f5f98fc0eefb7e50577981\",\"dweb:/ipfs/QmXRoFGUgfsaRkoPT5bxNMtSayKTQ8GZATLPXf69HcRA51\"]},\"@openzeppelin/contracts/security/Pausable.sol\":{\"keccak256\":\"0xe68ed7fb8766ed1e888291f881e36b616037f852b37d96877045319ad298ba87\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1d491a2ca79dbf44bc02e876e21a5847a2cbcc011188532ad8662cdc1c134a4e\",\"dweb:/ipfs/QmUQXhSV8ZvHLzfdG89ZNSh1nLrAYyjnNBLznJGwGcwVk8\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0xdadd41acb749920eccf40aeaa8d291adf9751399a7343561bad13e7a8d99be0b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://12af4ac016f9fdf3be5d15824f4292272aa11f6b2e0192a0f7320f5ad49bbbf0\",\"dweb:/ipfs/QmRXMpdqCgA3TYuYxBodqs5p9jGbnMW6xa2gvjppvq4TWk\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0xbbc8ac883ac3c0078ce5ad3e288fbb3ffcc8a30c3a98c0fda0114d64fc44fca2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://87a7a5d2f6f63f84598af02b8c50ca2df2631cb8ba2453e8d95fcb17e4be9824\",\"dweb:/ipfs/QmR76hqtAcRqoFj33tmNjcWTLrgNsAaakYwnKZ8zoJtKei\"]},\"@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol\":{\"keccak256\":\"0x978847fbff92d66d27d8767402a90ba996970b1936b372406aa17f5492bd8dc5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1414cb92779420b50d3e796b47bad6ea800ef1805bc6f9bf35a3ccb4e17db3dc\",\"dweb:/ipfs/QmaMzwYqLiivfaWSgqeaAPboBtJjVD1hSrH48p7ExJZ7DG\"]},\"@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol\":{\"keccak256\":\"0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd\",\"dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0x32c202bd28995dd20c4347b7c6467a6d3241c74c8ad3edcbb610cd9205916c45\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8179c356adb19e70d6b31a1eedc8c5c7f0c00e669e2540f4099e3844c6074d30\",\"dweb:/ipfs/QmWFbivarEobbqhS1go64ootVuHfVohBseerYy9FTEd1W2\"]},\"@openzeppelin/contracts/utils/cryptography/ECDSA.sol\":{\"keccak256\":\"0x3c07f43e60e099b3b157243b3152722e73b80eeb7985c2cd73712828d7f7da29\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://466ffb5a6e3bd65fffd996f9287ffd240ea21588a338c6efe143d94eaed014a7\",\"dweb:/ipfs/Qmans3vvPJZcvxe9KLAPc9Xwe4TFVTJdzaQGpi62Vrhoe2\"]},\"project:/contracts/Bank.sol\":{\"keccak256\":\"0xcae25caecfab1bdded2778c1e0495dd0140560b5f557512645b8aeea530301f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://450ac48b4c10f935935291aa1895e91228acc466d8052b0b02467a7a7b7ffb40\",\"dweb:/ipfs/QmWMVe29oNoc34iLTZrnPK8AoBDvBv9fWZzi75RF6zZugf\"]},\"project:/contracts/FFFToken.sol\":{\"keccak256\":\"0x1925e69aa2fb0777f003c76af3f390302fa50354a3a5d1585e841cd9a2155435\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6a85a00e1466c91bcc26f1b53a74686a52730fff3556cd405e2ac932269c7032\",\"dweb:/ipfs/QmWBHaHZw9W8fxbuxwVjRGXM4c5x9LQarcUyBoekRme6BL\"]},\"project:/contracts/GameOwner.sol\":{\"keccak256\":\"0x845d145489804963f50d0d4c71a37a392fe58b8217bb94a4bea97fb8cd7e3eee\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ea00b0290ae688faf3b6488e106907d72ea56397b256dd790858b53be0a6c405\",\"dweb:/ipfs/QmRPSmtqYpav425qstkm7F5htNrfRJ8xNAavKP2L7ouwhB\"]},\"project:/contracts/GameOwnerUpgradeable.sol\":{\"keccak256\":\"0xfbda35d29122244e0c0a9d3db60522993e3c3a9528588b77bad7d5525a5a014e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://88e7a922e47cbf8e6294205031f6260238dca6d93738a6991c5d13f1af137ee5\",\"dweb:/ipfs/QmVUa3jc5JqvbAG7eBuUKv48zm1gK9VkfmUAghkuCqns14\"]}},\"version\":1}",
@@ -25962,12 +25970,13 @@
     "1652810533364": {
       "events": {},
       "links": {},
-      "address": "0x331fa0F7eddB4e6348b3594F4358df107364a9E5",
-      "transactionHash": "0xcc88ff181ff4c172e87bd008e721f647b800847ab02ebc114104c37cc71721ad"
+      "address": "0x9aEDFB8caf231c0Cb9B72AD28238185A6E321301",
+      "transactionHash": "0x04d6183c114ca26d465445326d2a2f6ce434704a3268262437f572b65bb7a716"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-05-19T18:07:01.158Z",
+  "updatedAt": "2022-05-19T18:36:53.544Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {
