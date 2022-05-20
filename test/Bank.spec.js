@@ -61,12 +61,72 @@ contract("Bank contract", () => {
 
   });
 
+  contract("Deposit", accounts  => {
+
+    it("withdraw 2 FFF and deposit again", async () => {
+      const fee = web3.utils.toWei("0.1");
+
+      const bank = await Bank.deployed();
+      const fffToken = await FunflowerFarmToken.deployed();
+      const sessionId = await bank.getSessionId(TestSupport.accounts.PLAYER.address, {
+        from: TestSupport.accounts.PLAYER.address
+      })
+
+      const fff = 2
+
+      const signature = await sign(web3, 
+        sessionId,
+        TestSupport.accounts.PLAYER.address,
+        fff,
+        validDeadline
+      );
+      
+      await bank.withdraw(signature, sessionId, fff, validDeadline, {
+        from: TestSupport.accounts.PLAYER.address,
+        value: fee
+      });
+
+      const fffTokenBalanceBeforeDeposit = await fffToken.balanceOf.call(TestSupport.accounts.PLAYER.address);
+
+      const teamAddressFFFBalanceBeforeDeposit = await fffToken.balanceOf.call(TestSupport.accounts.TEAM.address);
+
+      const sessionIdForDeposit = await bank.getSessionId(TestSupport.accounts.PLAYER.address, {
+        from: TestSupport.accounts.PLAYER.address
+      })
+
+      const signatureForDeposit = await sign(web3, 
+        sessionIdForDeposit,
+        TestSupport.accounts.PLAYER.address,
+        fff,
+        validDeadline
+      );
+
+      await bank.deposit(signatureForDeposit, sessionIdForDeposit, fff, validDeadline, {
+        from: TestSupport.accounts.PLAYER.address,
+      });
+
+      const teamAddressFFFBalance= await fffToken.balanceOf.call(TestSupport.accounts.TEAM.address);
+      const fffTokenBalance = await fffToken.balanceOf.call(TestSupport.accounts.PLAYER.address);
+
+      assert.equal(new BigNumber(teamAddressFFFBalanceBeforeDeposit).plus(new BigNumber(fff)).toFixed(), new BigNumber(teamAddressFFFBalance).toFixed());
+      assert.equal(new BigNumber(fffTokenBalanceBeforeDeposit).minus(new BigNumber(fff)).toFixed(), new BigNumber(fffTokenBalance).toFixed());
+
+      const hash = encodeSyncFunction(web3, sessionIdForDeposit, TestSupport.accounts.PLAYER.address, fff, validDeadline)
+      const isDepositeExecuted = await bank.isTransactionExecuted(hash, {
+        from: TestSupport.accounts.PLAYER.address
+      })
+
+      assert.equal(true, isDepositeExecuted)
+
+    });
+
+  });
+
   contract("Withdraw", accounts  => {
 
     it("withdraw 2 FFF with success", async () => {
       const fee = web3.utils.toWei("0.1");
       const walletBalance = await web3.eth.getBalance(TestSupport.accounts.WITHDRAW_WALLET.address)
-      console.log('b ' + walletBalance)
       const bank = await Bank.deployed();
       const fffToken = await FunflowerFarmToken.deployed();
       const sessionId = await bank.getSessionId(TestSupport.accounts.PLAYER.address, {
@@ -129,7 +189,7 @@ contract("Bank contract", () => {
     });
 
     it("withdraw with deadline", async () => {
-      const fee = web3.utils.toWei("0.01");
+      const fee = web3.utils.toWei("0.1");
       const bank = await Bank.deployed();
       const sessionId = await bank.getSessionId(TestSupport.accounts.PLAYER.address, {
         from: TestSupport.accounts.PLAYER.address
