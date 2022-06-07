@@ -15403,12 +15403,13 @@
         }
       },
       "links": {},
-      "address": "0x7E6aE047d4415D7628Dc3B63434afAa77a1Eb3c7",
-      "transactionHash": "0x875b0ea8ebbb9398f04c71baeaa3ef8fdc5e1c10dff98a191b573c7f0ffb2c3d"
+      "address": "0x0E0c7228EF984B500d82a31ce5906Cfd45900302",
+      "transactionHash": "0xb793db829d1d7799b287206e57e55f2c5106e3b8890b4dcd3aa546d048b74f8b"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-05-20T13:01:29.990Z",
+  "updatedAt": "2022-06-06T19:49:35.427Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {

@@ -1,0 +1,149 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0xEBbBE833F528ed5206C52326A2C92665CACAa5A9",
+      "txHash": "0xfa4ae40eed06c4c68c72b1fd5dd3a3a173f5379691f998ed27e1cd662272d618",
+      "kind": "uups"
+    }
+  ],
+  "impls": {
+    "533202b945e9881087c6da78e15ec704a4ff7f00d4cd89d7fe3855ce101f5c9d": {
+      "address": "0x835186F64fAC54Fe62687A8f32900a06BAc49c7B",
+      "txHash": "0xedf8319fd6f3f1fd736da61f7b5284d64d156aa38bfe0c766342d6b21ab3d494",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_uint8",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:87"
+          },
+          {
+            "contract": "GameOwnerUpgradeable",
+            "label": "gameRoles",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "../project:/contracts/GameOwnerUpgradeable.sol:8"
+          },
+          {
+            "contract": "ERC1967UpgradeUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "contract": "UUPSUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol:107"
+          },
+          {
+            "contract": "Bank",
+            "label": "executed",
+            "type": "t_mapping(t_bytes32,t_bool)",
+            "src": "../project:/contracts/Bank.sol:17"
+          },
+          {
+            "contract": "Bank",
+            "label": "sessions",
+            "type": "t_mapping(t_address,t_bytes32)",
+            "src": "../project:/contracts/Bank.sol:19"
+          },
+          {
+            "contract": "Bank",
+            "label": "syncedAt",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/Bank.sol:20"
+          },
+          {
+            "contract": "Bank",
+            "label": "withdrawFee",
+            "type": "t_uint256",
+            "src": "../project:/contracts/Bank.sol:22"
+          },
+          {
+            "contract": "Bank",
+            "label": "withdrawFeeWallet",
+            "type": "t_address",
+            "src": "../project:/contracts/Bank.sol:23"
+          },
+          {
+            "contract": "Bank",
+            "label": "signer",
+            "type": "t_address",
+            "src": "../project:/contracts/Bank.sol:24"
+          },
+          {
+            "contract": "Bank",
+            "label": "fffToken",
+            "type": "t_contract(FunflowerFarmToken)3312",
+            "src": "../project:/contracts/Bank.sol:27"
+          }
+        ],
+        "types": {
+          "t_mapping(t_bytes32,t_bool)": {
+            "label": "mapping(bytes32 => bool)"
+          },
+          "t_bytes32": {
+            "label": "bytes32"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_bytes32)": {
+            "label": "mapping(address => bytes32)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_contract(FunflowerFarmToken)3312": {
+            "label": "contract FunflowerFarmToken"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          }
+        }
+      }
+    }
+  }
+}

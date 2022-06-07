@@ -31,7 +31,7 @@ module.exports = {
         );
       },
       gas: 5000000,
-      gasPrice: 200000000000, // 15 gwei
+      gasPrice: 35000000000, // 35 gwei
       network_id: 137,
     },
   },
